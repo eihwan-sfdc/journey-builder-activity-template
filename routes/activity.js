@@ -63,7 +63,8 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( "*********** save called ***********");
+    console.log( req.body );
     logData(req);
     res.send(200, 'Save');
 };
@@ -72,7 +73,8 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-
+    console.log( "*********** execute called ***********");
+    console.log( req.body );
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
@@ -101,8 +103,9 @@ exports.execute = function (req, res) {
  * POST Handler for /publish/ route of Activity.
  */
 exports.publish = function (req, res) {
+    console.log( "*********** publish called ***********");
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Publish');
 };
@@ -111,8 +114,9 @@ exports.publish = function (req, res) {
  * POST Handler for /validate/ route of Activity.
  */
 exports.validate = function (req, res) {
+    console.log( "*********** validate called ***********");
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Validate');
 };
