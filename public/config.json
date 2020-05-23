@@ -3,7 +3,7 @@
     "metaData": {
         "icon": "images/icon.png",
         "iconSmall": "images/iconSmall.png",
-        "category": "message" 
+        "category": "message"
     },
     "type": "REST",
     "lang": {
@@ -16,9 +16,11 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                }									
+        {"contactKey": "{{Contact.Key}}"},
+				{"emailAddress": "{{Contact.Attribute.CustomActivity.email}}"},
+        {"attr1": "{{Contact.Attribute.CustomActivity.attr1}}"},
+        {"attr2": "{{Contact.Attribute.CustomActivity.attr2}}"},
+        {"attr3": "{{Contact.Attribute.CustomActivity.attr3}}"}
 			],
           "outArguments": [],
           "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",

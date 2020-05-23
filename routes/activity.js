@@ -74,7 +74,7 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
     console.log( "*********** execute called ***********");
-    console.log( req.body );
+    logData(req);
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
@@ -89,7 +89,6 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
-            logData(req);
             res.send(200, 'Execute');
         } else {
             console.error('inArguments invalid.');
