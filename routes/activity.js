@@ -74,28 +74,27 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
     console.log( "*********** execute called ***********");
-    logData(req);
-    res.send(200, 'Save');
-    // // example on how to decode JWT
-    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-    //
-    //     // verification error -> unauthorized request
-    //     if (err) {
-    //         console.error(err);
-    //         return res.status(401).end();
-    //     }
-    //
-    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-    //
-    //         // decoded in arguments
-    //         var decodedArgs = decoded.inArguments[0];
-    //         logData(req);
-    //         res.send(200, 'Execute');
-    //     } else {
-    //         console.error('inArguments invalid.');
-    //         return res.status(400).end();
-    //     }
-    // });
+
+    // example on how to decode JWT
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+
+        // verification error -> unauthorized request
+        if (err) {
+            console.error(err);
+            return res.status(401).end();
+        }
+
+        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+
+            // decoded in arguments
+            var decodedArgs = decoded.inArguments[0];
+            logData(req);
+            res.send(200, 'Execute');
+        } else {
+            console.error('inArguments invalid.');
+            return res.status(400).end();
+        }
+    });
 };
 
 
