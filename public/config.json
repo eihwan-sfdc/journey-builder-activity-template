@@ -30,7 +30,7 @@
              }
            ],
           "outArguments": [],
-          "url": "https://eihwan.com/custom_activity",
+          "url": "https://eihwan.com/api/custom_activity/execute",
            "verb": "POST",
             "body": "",
             "header": "",
