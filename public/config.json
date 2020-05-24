@@ -7,7 +7,7 @@
     },
     "type": "REST",
     "lang": {
-        "ja": {
+        "ja": { 
             "name": "Template",
           "description": "A Template for a custom Journey Builder activity",
           "step1Label": "Configure Activity"
@@ -33,7 +33,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "afdbdbb7-8700-4f9a-81bf-122be854bcd7", 
+      "applicationExtensionKey": "afdbdbb7-8700-4f9a-81bf-122be854bcd7",
       "save": {
         "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/save",
           "verb": "POST",
