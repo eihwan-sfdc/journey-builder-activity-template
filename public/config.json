@@ -30,13 +30,7 @@
              }
            ],
           "outArguments": [],
-          "url": "https://eihwan.com/api/custom_activity/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": false,
-            "timeout": 10000
+          "url": "https://eihwan.com/api/custom_activity/execute"
         }
     },
     "configurationArguments": {
