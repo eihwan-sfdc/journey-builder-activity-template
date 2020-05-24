@@ -9,6 +9,16 @@ var http = require('https');
 
 exports.logExecuteData = [];
 
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+};
+
 function logData(req) {
     exports.logExecuteData.push({
         body: req.body,
@@ -31,6 +41,7 @@ function logData(req) {
     });
     console.log("inspect body: " + util.inspect(req.body));
     console.log("body: " + req.body);
+    console.log("body parseJwt: " + parseJwt(req.body));
     console.log("headers: " + JSON.stringify(req.headers));
     console.log("trailers: " + JSON.stringify(req.trailers));
     console.log("method: " + req.method);
