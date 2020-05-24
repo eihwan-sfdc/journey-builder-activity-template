@@ -27,7 +27,7 @@
              },
              {
                  "customAttribute": "{{Contact.Attribute.de_customactivity.attr1}}"
-             },
+             }
            ],
           "outArguments": [],
           "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
