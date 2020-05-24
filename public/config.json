@@ -30,7 +30,7 @@
              }
            ],
           "outArguments": [],
-          "url": "https://eihwan.com/api/custom_activity/execute",
+          "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
           "useJwt": true,
           "customerKey": "fdJYqnyUxWaJIL2FExuTXj66Et2hv-ca64nQGbs81nake-hVO188ATmsPkoK1e-WL7xiJ2zILbA3zlrH24ucEx1MiJGOwXLJos9Oofk5c1lYw6G_jis5U7k2QIa725dhC112grc1hlkRGc7flUEm4jYHHZnsjcwL78ihiec7zDqDGPUuB6sbsUHVfTdfzRPVU9ESVq4dIUPZNNYXP1WDY4FSI3D9Gr-xO-8_DFyO87jabjs2KI_GoGDe6m7X0g2",
         }
