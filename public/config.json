@@ -16,8 +16,13 @@
     "arguments": {
         "execute": {
            "inArguments":[
-              {"hoge": "hogehoge"},
-      			],
+             {
+                "contactIdentifier": "{{Contact.Key}}"
+             },
+             {
+                 "emailAddress": "{{InteractionDefaults.Email}}"
+             },
+           ],
           "outArguments": [],
           "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
