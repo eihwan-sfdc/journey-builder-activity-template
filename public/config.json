@@ -22,6 +22,12 @@
              {
                  "emailAddress": "{{InteractionDefaults.Email}}"
              },
+             {
+                 "staticValue": "HOGE_HOGE_HOGE_HOGE"
+             },
+             {
+                 "customAttribute": "{{Contact.Attribute.de_customactivity.attr1}}"
+             },
            ],
           "outArguments": [],
           "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
