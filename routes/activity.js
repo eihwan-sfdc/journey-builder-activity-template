@@ -88,8 +88,9 @@ exports.execute = function (req, res) {
 
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            console.log("decoded: " + decoded);
-            console.log("decodedArgs: " + decodedArgs);
+            console.log("jwtSecret: " + process.env.jwtSecret);
+            console.log("decoded: " + JSON.stringify(decoded));
+            console.log("decodedArgs: " + JSON.stringify(decodedArgs));
             logData(req);
             res.send(200, 'Execute');
         } else {
