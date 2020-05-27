@@ -29,10 +29,9 @@ function logData(req) {
         secure: req.secure,
         originalUrl: req.originalUrl
     });
-    console.log("inspect body: " + util.inspect(req.body));
-    console.log("body: " + req.body);
-    console.log("headers: " + JSON.stringify(req.headers));
-    console.log("trailers: " + JSON.stringify(req.trailers));
+    console.log("body: " + util.inspect(req.body));
+    console.log("headers: " + req.headers);
+    console.log("trailers: " + req.trailers);
     console.log("method: " + req.method);
     console.log("url: " + req.url);
     console.log("params: " + util.inspect(req.params));
@@ -64,7 +63,7 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    console.log( "*********** save called ***********");
+    //console.log( req.body );
     logData(req);
     res.send(200, 'Save');
 };
@@ -73,7 +72,6 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    console.log( "*********** execute called ***********");
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -88,9 +86,7 @@ exports.execute = function (req, res) {
 
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            console.log("jwtSecret: " + process.env.jwtSecret);
-            console.log("decoded: " + JSON.stringify(decoded));
-            console.log("decodedArgs: " + JSON.stringify(decodedArgs));
+
             logData(req);
             res.send(200, 'Execute');
         } else {
@@ -105,8 +101,8 @@ exports.execute = function (req, res) {
  * POST Handler for /publish/ route of Activity.
  */
 exports.publish = function (req, res) {
-    console.log( "*********** publish called ***********");
     // Data from the req and put it in an array accessible to the main app.
+    //console.log( req.body );
     logData(req);
     res.send(200, 'Publish');
 };
@@ -115,8 +111,8 @@ exports.publish = function (req, res) {
  * POST Handler for /validate/ route of Activity.
  */
 exports.validate = function (req, res) {
-    console.log( "*********** validate called ***********");
     // Data from the req and put it in an array accessible to the main app.
+    //console.log( req.body );
     logData(req);
     res.send(200, 'Validate');
 };
