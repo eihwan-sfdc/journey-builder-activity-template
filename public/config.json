@@ -19,9 +19,6 @@
                     "contactKey": "{{Contact.Key}}"
                 },
                 {
-                    "hoge": "HOGEHOGE"
-                },
-                {
                     "attr1": "{{Contact.Attribute.de_customactivity.attr1}}"
                 },
                 {
