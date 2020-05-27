@@ -39,7 +39,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "f622d495-78d9-42c9-ab33-49dced8c484e",
+      "applicationExtensionKey": "cea4fc90-2586-4c96-8259-bc2a93a9110a",
       "save": {
         "url": "https://custom-activity-eihwan.herokuapp.com/save",
           "verb": "POST",
