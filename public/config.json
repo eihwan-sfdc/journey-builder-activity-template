@@ -7,7 +7,7 @@
     },
     "type": "REST",
     "lang": {
-        "ja": {
+        "en-US": {
             "name": "Template",
           "description": "A Template for a custom Journey Builder activity",
           "step1Label": "Configure Activity"
@@ -16,26 +16,18 @@
     "arguments": {
         "execute": {
            "inArguments":[
-             {
-                "contactIdentifier": "{{Contact.Key}}"
-             },
-             {
-                 "emailAddress": "{{InteractionDefaults.Email}}"
-             },
-             {
-                 "staticValue": "HOGE_HOGE_HOGE_HOGE"
-             },
-             {
-                 "customAttribute": "{{Contact.Attribute.de_customactivity.attr1}}"
-             }
-           ],
+				{
+					"contactKey": "{{Contact.Key}}"
+                }
+			],
           "outArguments": [],
-          "url": "https://eihwan.com/api/custom_activity/execute", 
-          "verb": "POST",
-          "body": "",
-          "header": "",
-          "format": "json",
-          "timeout": 10000
+          "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
+           "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
         }
     },
     "configurationArguments": {
