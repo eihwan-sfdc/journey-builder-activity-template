@@ -29,7 +29,7 @@
                 },
                 {
                     "attr3": "{{Contact.Attribute.de_customactivity.attr3}}"
-                }									
+                }
 			],
           "outArguments": [],
           "url": "https://custom-activity-eihwan.herokuapp.com/execute",
@@ -42,7 +42,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "afdbdbb7-8700-4f9a-81bf-122be854bcd7",
+      "applicationExtensionKey": "f622d495-78d9-42c9-ab33-49dced8c484e",
       "save": {
         "url": "https://custom-activity-eihwan.herokuapp.com/save",
           "verb": "POST",
