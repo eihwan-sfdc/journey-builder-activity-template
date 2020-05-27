@@ -16,11 +16,23 @@
         "execute": {
            "inArguments":[
 				{
-					"contactKey": "{{Contact.Key}}"
-                }
+                    "contactKey": "{{Contact.Key}}"
+                },
+                {
+                    "hoge": "HOGEHOGE"
+                },
+                {
+                    "attr1": "{{Contact.Attribute.de_customactivity.attr1}}"
+                },
+                {
+                    "attr2": "{{Contact.Attribute.de_customactivity.attr2}}"
+                },
+                {
+                    "attr3": "{{Contact.Attribute.de_customactivity.attr3}}"
+                }									
 			],
           "outArguments": [],
-          "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
+          "url": "https://custom-activity-eihwan.herokuapp.com/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -32,22 +44,22 @@
     "configurationArguments": {
       "applicationExtensionKey": "afdbdbb7-8700-4f9a-81bf-122be854bcd7",
       "save": {
-        "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/save",
+        "url": "https://custom-activity-eihwan.herokuapp.com/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/publish",
+        "url": "https://custom-activity-eihwan.herokuapp.com/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/stop",
+        "url": "https://custom-activity-eihwan.herokuapp.com/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/validate",
+        "url": "https://custom-activity-eihwan.herokuapp.com/validate",
         "verb": "POST",
         "useJwt": true
       }
