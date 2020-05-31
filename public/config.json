@@ -35,12 +35,12 @@
                 }
 			],
           "outArguments": [],
-          "url": "https://custom-activity-eihwan.herokuapp.com/journeybuilder/execute",
+          "url": "https://eihwan.com/api/custom_activity/execute",
            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
-            "useJwt": true,
+            "useJwt": false,
             "timeout": 10000
         }
     },
