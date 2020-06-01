@@ -1,3 +1,7 @@
+# Please refer to the original repository about Tutorial:
+devsutd/journey-builder-activity-template
+
+
 # Journey Builder Activity Template
 ### Starter template for a messaging JB Activity using Node.JS
 
